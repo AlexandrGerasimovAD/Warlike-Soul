@@ -44,7 +44,10 @@ public class movePlayer : MonoBehaviour
         Vector3 _moveDirectionSide = _dirRight * _vectorMove.x;
         Vector3 _direction = (_moveDirectionForward + _moveDirectionSide).normalized;
         Vector3 _distance = _direction * _speedMove * Time.deltaTime;//создаю контроьный вектор 
-        _characterController.Move(_distance);
+        if (_animator.GetBool("run") == true)
+        {
+            _characterController.Move(_distance);
+        }
         if (_joystick.Horizontal == 0 && _joystick.Vertical == 0)//анимирование передвижения в зависимости от значений джойстик
         {
             _animator.SetBool("Stop", true);
@@ -52,6 +55,7 @@ public class movePlayer : MonoBehaviour
             _animator.SetBool("LeftRun", false);
             _animator.SetBool("RightRun", false);
             _animator.SetBool("BackRun", false);
+            _animator.SetBool("run", false);
         }
         if (_joystick.Horizontal < -0.2)
         {
@@ -60,7 +64,8 @@ public class movePlayer : MonoBehaviour
             _animator.SetBool("BackRun", false);
             _animator.SetBool("RightRun", false);
             _animator.SetBool("RunToGun", false);
-            _speedMove = 4;
+            _animator.SetBool("run", true);
+            _speedMove = 6;
         }
         if (_joystick.Horizontal > 0.2)
         {
@@ -69,7 +74,8 @@ public class movePlayer : MonoBehaviour
             _animator.SetBool("LeftRun", false);
             _animator.SetBool("RunToGun", false);
             _animator.SetBool("BackRun", false);
-            _speedMove = 4;
+            _animator.SetBool("run", true);
+            _speedMove = 6;
         }
         if (_joystick.Vertical > 0.1)
         {
@@ -78,6 +84,7 @@ public class movePlayer : MonoBehaviour
             _animator.SetBool("BackRun", false);
             _animator.SetBool("RightRun", false);
             _animator.SetBool("LeftRun", false);
+            _animator.SetBool("run", true);
             _speedMove = _speedSave;
         }
         if (_joystick.Vertical < -0.1)
@@ -87,7 +94,8 @@ public class movePlayer : MonoBehaviour
             _animator.SetBool("RightRun", false);
             _animator.SetBool("LeftRun", false);
             _animator.SetBool("RightRun", false);
-            _speedMove = 2;
+            _animator.SetBool("run", true);
+            _speedMove = 3;
         }
     }
 }
