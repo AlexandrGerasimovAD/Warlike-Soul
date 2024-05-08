@@ -25,7 +25,7 @@ public class CameraRunToPlayer : MonoBehaviour
     //если есть то перемещаеться ближе к игроку 
     void Start()
     {
-        _target = GameObject.FindWithTag("Player").transform;
+        _target = GameObject.Find("targetCamPoint").transform;
         _localPosition = _target.InverseTransformPoint(_position);
         _maxDistance = Vector3.Distance(_position, _target.position);
     }

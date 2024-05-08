@@ -12,6 +12,7 @@ public class movePlayer : MonoBehaviour
     public bool _isMoving=true;
     public float _deleyStan;
     private float _speedSave;
+    private GameObject _runEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class movePlayer : MonoBehaviour
         _animator = GetComponent<Animator>();
         _characterController = GetComponent<CharacterController>();
         _speedSave = _speedMove;
+        _runEffect = GameObject.Find("runEffect");
     }
 
     // Update is called once per frame
@@ -47,6 +49,11 @@ public class movePlayer : MonoBehaviour
         if (_animator.GetBool("run") == true)
         {
             _characterController.Move(_distance);
+            _runEffect.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else
+        {
+            _runEffect.transform.GetChild(0).gameObject.SetActive(false);
         }
         if (_joystick.Horizontal == 0 && _joystick.Vertical == 0)//анимирование передвижения в зависимости от значений джойстик
         {
