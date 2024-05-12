@@ -49,8 +49,10 @@ public class itemUpDownPosition : MonoBehaviour
     {
         if (other.gameObject == _player)
         {
-            _coinInt += 50;
-            _coinText.text=_coinInt.ToString();
+            var _getCoin = PlayerPrefs.GetInt("mainCoinSave");
+            PlayerPrefs.SetInt("mainCoinSave", _getCoin + 50);
+            var _pushCoin= PlayerPrefs.GetInt("mainCoinSave");
+            _coinText.text=_pushCoin.ToString();
            // _coinText.text = _coinInt.ToString();
             Destroy(gameObject);
         }
