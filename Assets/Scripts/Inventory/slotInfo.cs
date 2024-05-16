@@ -8,6 +8,7 @@ public class slotInfo : MonoBehaviour
     public int _itemIndex;
     public int _count;
     public int _maxCount;
+    public bool _full;
     // Start is called before the first frame update
     void Start()
     {
