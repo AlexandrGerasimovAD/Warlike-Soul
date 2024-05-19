@@ -9,6 +9,8 @@ public class slotInfo : MonoBehaviour
     public int _count;
     public int _maxCount;
     public bool _full;
+    public GameObject _prefabForPlayer;
+    public GameObject _prefabForLocation;
     // Start is called before the first frame update
     void Start()
     {

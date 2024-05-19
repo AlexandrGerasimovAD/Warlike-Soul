@@ -5,9 +5,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class flipButtom : MonoBehaviour,IPointerClickHandler,IPointerUpHandler,IPointerDownHandler
+public class flipButtom : MonoBehaviour,IPointerUpHandler,IPointerDownHandler
 {
     private GameObject _player;
+    private GameObject _itemForLocation;
     public itemInfo _item;
     public bool _isClick;
     private Animator _animator;
@@ -16,11 +17,6 @@ public class flipButtom : MonoBehaviour,IPointerClickHandler,IPointerUpHandler,I
         _player = GameObject.FindGameObjectWithTag("Player");
         _animator = gameObject.GetComponent<Animator>();
     }
-    public void OnPointerClick(PointerEventData eventData)
-    {
-          
-    }
-
     public void OnPointerUp(PointerEventData eventData)
     {
         _isClick = false;
@@ -31,11 +27,20 @@ public class flipButtom : MonoBehaviour,IPointerClickHandler,IPointerUpHandler,I
         _isClick = true;
         if (_item != null)
         {
+            //выброс предмета перед заменой
+            _itemForLocation= gameObject.transform.parent.GetComponent<slotInfo>()._prefabForLocation;
+            var _drop = Instantiate(_itemForLocation);
+           // _drop.transform.SetParent(_player.transform.parent);
+            _drop.transform.localPosition = new Vector3(_player.transform.localPosition.x + 1,
+            _player.transform.localPosition.y + (float)2.5, _player.transform.localPosition.z + 1);
+            //замена предмета в слоте
             var _slotParent = gameObject.transform.parent.GetComponent<slotInfo>();
             _slotParent._count = _item.item.countItem;
             _slotParent._full = false;
             _slotParent._itemIndex = _item.item.id;
             _slotParent._maxCount = _item.item.maxCount;
+            _slotParent._prefabForPlayer = _item.item.prefabforPlayer;
+            _slotParent._prefabForLocation = _item.item.prefabforLocation;
             var _icon = gameObject.transform.parent.GetChild(0);
             _icon.GetComponent<Image>().sprite = _item.item.Icon;
             var _textCount = gameObject.transform.parent.GetChild(1);

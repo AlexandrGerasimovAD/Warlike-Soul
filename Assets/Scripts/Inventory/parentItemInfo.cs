@@ -13,7 +13,8 @@ public class parentItemInfo : ScriptableObject
     public double delayShot;
     [Multiline(5)]
     public string descriptionItem;
-    public GameObject prefab;
+    public GameObject prefabforPlayer;
+    public GameObject prefabforLocation;
     public Sprite Icon;
     public UnityEvent customEvent;
 }
