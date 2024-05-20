@@ -112,6 +112,10 @@ public class takeForInventory : MonoBehaviour
                     _slotInfo._maxCount = gameObject.GetComponent<itemInfo>().item.maxCount;
                     _slotInfo._prefabForPlayer = gameObject.GetComponent<itemInfo>().item.prefabforPlayer;
                     _slotInfo._prefabForLocation = gameObject.GetComponent<itemInfo>().item.prefabforLocation;
+                    _slotInfo._rashodnik = gameObject.GetComponent<itemInfo>().item._rashodnik;
+                    _slotInfo._gameItem = gameObject.GetComponent<itemInfo>().item._gameItem;
+                    _slotInfo._heel = gameObject.GetComponent<itemInfo>().item._heel;
+                    _slotInfo._typeWeapoon = gameObject.GetComponent<itemInfo>().item._typeWeapoon;
                     if (gameObject.GetComponent<itemInfo>().item.maxCount > 1)//textCount
                     {
                         var _textCount = _slot.GetChild(1).GetComponent<TMP_Text>();
