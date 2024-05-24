@@ -13,10 +13,11 @@ public class parentItemInfo : ScriptableObject
     public int countItem;
     public int maxCount;
     public float damage;
-    public double delayShot;
+    public float delayShot;
     [Multiline(5)]
     public string descriptionItem;
     public GameObject prefabforPlayer;
     public GameObject prefabforLocation;
+    public GameObject prefabShot;
     public Sprite Icon;
 }

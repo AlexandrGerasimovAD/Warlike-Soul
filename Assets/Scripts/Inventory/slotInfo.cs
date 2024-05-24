@@ -18,9 +18,11 @@ public class slotInfo : MonoBehaviour,IPointerClickHandler
     public GameObject _prefabForLocation;
     private GameObject _hand;
     private Animator _animator;
+    private GameObject _buttomAtack;
     private void Start()
     {
-        _hand = GameObject.Find("handCharacter"); 
+        _hand = GameObject.Find("handCharacter");
+        _buttomAtack = GameObject.Find("AtackButtom");
         _animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
     public void OnPointerClick(PointerEventData eventData)
@@ -49,12 +51,16 @@ public class slotInfo : MonoBehaviour,IPointerClickHandler
             if (gameObject.GetComponent<slotInfo>()._typeWeapoon == 2)
             {
                 //включаем анимацию для пистолета
+                var _item = gameObject.GetComponent<slotInfo>()._prefabForPlayer.GetComponent<itemInfo>().item;//инфо оружия
                 _animator.SetInteger("typeWeapoon", 2);
                 var _spawn = Instantiate(gameObject.GetComponent<slotInfo>()._prefabForPlayer);
                 _spawn.transform.SetParent(_hand.transform);
                 _spawn.transform.localPosition = new Vector3(_hand.transform.localPosition.x, _hand.transform.localPosition.y,
                 _hand.transform.localPosition.z);
                 _spawn.transform.localRotation = Quaternion.Euler(110, 0, 90);
+                _buttomAtack.GetComponent<AttackButtom>()._deley = _item.delayShot;
+                _buttomAtack.GetComponent<AttackButtom>()._domage = _item.damage;
+                _buttomAtack.GetComponent<AttackButtom>()._prefabShot = _item.prefabShot;
             }
             if (gameObject.GetComponent<slotInfo>()._typeWeapoon == 3)
             {
