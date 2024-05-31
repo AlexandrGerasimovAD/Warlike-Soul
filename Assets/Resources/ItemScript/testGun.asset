@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d142150440ab46bcdacf3f28f960f, type: 3}
+  m_Name: testGun
+  m_EditorClassIdentifier: 
+  nameItem: testGun
+  id: 1
+  _rashodnik: 0
+  _gameItem: 1
+  _typeWeapoon: 2
+  _heel: 0
+  countItem: 1
+  maxCount: 1
+  damage: 50
+  delayShot: 1
+  descriptionItem: 
+  prefabforPlayer: {fileID: 417691047774336563, guid: ae52bb8cf3114c842932e68225b3aeab, type: 3}
+  prefabforLocation: {fileID: 5067392323515887848, guid: c546d9942622b9e479260d9b418c9590, type: 3}
+  prefabShot: {fileID: 4921864004964677031, guid: 7707b1173594fa843b389e1b8899ed35, type: 3}
+  Icon: {fileID: 21300000, guid: b2618aa932717c945a867dc279bb12fc, type: 3}

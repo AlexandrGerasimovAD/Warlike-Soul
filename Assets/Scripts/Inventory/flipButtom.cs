@@ -29,10 +29,11 @@ public class flipButtom : MonoBehaviour,IPointerUpHandler,IPointerDownHandler
         {
             //выброс предмета перед заменой
             _itemForLocation= gameObject.transform.parent.GetComponent<slotInfo>()._prefabForLocation;
-            var _drop = Instantiate(_itemForLocation);
+            if (_itemForLocation != null) { var _drop = Instantiate(_itemForLocation);
+                _drop.transform.localPosition = new Vector3(_player.transform.localPosition.x + 1,
+ _player.transform.localPosition.y + (float)2.5, _player.transform.localPosition.z + 1);
+            }
            // _drop.transform.SetParent(_player.transform.parent);
-            _drop.transform.localPosition = new Vector3(_player.transform.localPosition.x + 1,
-            _player.transform.localPosition.y + (float)2.5, _player.transform.localPosition.z + 1);
             //замена предмета в слоте
             var _slotParent = gameObject.transform.parent.GetComponent<slotInfo>();
             _slotParent._count = _item.item.countItem;
