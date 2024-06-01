@@ -16,6 +16,8 @@ public class OpenUiChest : MonoBehaviour
         if (other.gameObject == _player)
         {
             _chestPanel.SetActive(true);
+            GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
+            GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveChest();
         }
     }
     private void OnTriggerExit(Collider other)
@@ -23,6 +25,8 @@ public class OpenUiChest : MonoBehaviour
         if (other.gameObject == _player)
         {
             _chestPanel.SetActive(false);
+            GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
+            GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveChest();
         }
     }
 }

@@ -64,6 +64,8 @@ public class chestSlotInfo : MonoBehaviour,IPointerClickHandler
                         _slotGO._prefabForPlayer = null;
                         _slotGO._prefabForLocation = null;
                     }
+                    GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
+                    GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveChest();
                     break;
                 }
             }
@@ -119,6 +121,8 @@ public class chestSlotInfo : MonoBehaviour,IPointerClickHandler
                         _slotGO._prefabForLocation = null;
                        
                     }
+                    GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
+                    GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveChest();
                     break;
                 
             }

@@ -79,6 +79,8 @@ public class slotInfo : MonoBehaviour,IPointerClickHandler
                                 _animator.SetInteger("typeWeapoon", 0);
                             }
                         }
+                        GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
+                        GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveChest();
                         break;
                     }
                 }
@@ -139,6 +141,8 @@ public class slotInfo : MonoBehaviour,IPointerClickHandler
                                 _animator.SetInteger("typeWeapoon", 0);
                             }
                         }
+                        GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
+                        GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveChest();
                         break;
                     }
                 }

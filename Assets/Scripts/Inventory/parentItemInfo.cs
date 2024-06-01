@@ -14,6 +14,7 @@ public class parentItemInfo : ScriptableObject
     public int maxCount;
     public float damage;
     public float delayShot;
+    public int _byCount;
     [Multiline(5)]
     public string descriptionItem;
     public GameObject prefabforPlayer;

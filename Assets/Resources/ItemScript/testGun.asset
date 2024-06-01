@@ -22,7 +22,9 @@ MonoBehaviour:
   maxCount: 1
   damage: 50
   delayShot: 1
-  descriptionItem: 
+  _byCount: 10
+  descriptionItem: "\u0443\u0440\u043E\u043D \u043D\u0438\u0437\u043A\u0438\u0439\n\u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0440\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C
+    \u043D\u0438\u0437\u043A\u0430\u044F"
   prefabforPlayer: {fileID: 417691047774336563, guid: ae52bb8cf3114c842932e68225b3aeab, type: 3}
   prefabforLocation: {fileID: 5067392323515887848, guid: c546d9942622b9e479260d9b418c9590, type: 3}
   prefabShot: {fileID: 4921864004964677031, guid: 7707b1173594fa843b389e1b8899ed35, type: 3}

@@ -88,6 +88,7 @@ public class takeForInventory : MonoBehaviour
                         _replice = true;
                         pushItem(null);
                         Destroy(gameObject);
+                        GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
                         break;
                     }//€чейка €вл€етьс€ полностью заполненной
                     if (_slotInfoRep._count + 1 == _slotInfoRep._maxCount)
@@ -122,6 +123,7 @@ public class takeForInventory : MonoBehaviour
                         _textCount.text = gameObject.GetComponent<itemInfo>().item.countItem.ToString();
                     }
                     Destroy(gameObject);
+                    GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
                     break;
                 }
             }

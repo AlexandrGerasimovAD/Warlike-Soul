@@ -16,5 +16,6 @@ public class ClosedChest : MonoBehaviour,IPointerClickHandler
     {
         _chestPanel.SetActive(false);
         GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
+        GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveChest();
     }
 }
