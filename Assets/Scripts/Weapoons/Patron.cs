@@ -6,6 +6,7 @@ public class Patron : MonoBehaviour
 {
     private int _speed = 65;
     private GameObject _collizionEffect;
+    public float _domage;
     // Start is called before the first frame update
     void Start()
     {

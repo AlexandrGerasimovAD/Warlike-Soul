@@ -46,7 +46,8 @@ public class AttackButtom : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
                 _shotEffect.gameObject.SetActive(true);
                 var _shot = Instantiate(_prefabShot,_xAngle);//что спавним под каким углом спавним,сам патрон
                 _shot.transform.SetParent(_player.transform.parent);
-                _shot.transform.position = _hand.transform.position;            
+                _shot.transform.position = _hand.transform.position;
+                _shot.GetComponent<Patron>()._domage = _domage;
                 _timer = 0;
             }
         }//closed timer

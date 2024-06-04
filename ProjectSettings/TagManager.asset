@@ -6,6 +6,8 @@ TagManager:
   tags:
   - FxTemporaire
   - obstacle
+  - enemy
+  - playerDomage
   layers:
   - Default
   - TransparentFX

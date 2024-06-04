@@ -330,15 +330,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 74176946376e6b0419b6f218c4905504, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.04
+      value: 7.827173
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 74176946376e6b0419b6f218c4905504, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.07
+      value: 3.189
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 74176946376e6b0419b6f218c4905504, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 36.17
+      value: 49.631134
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 74176946376e6b0419b6f218c4905504, type: 3}
       propertyPath: m_LocalRotation.w
@@ -379,6 +379,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74176946376e6b0419b6f218c4905504, type: 3}
       propertyPath: m_Name
       value: GoldPatron
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74176946376e6b0419b6f218c4905504, type: 3}
+      propertyPath: m_TagString
+      value: playerDomage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -437,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e0f4ceaa93bdf4d9f450427348945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _domage: 0
 --- !u!4 &5694284480966242077 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 74176946376e6b0419b6f218c4905504, type: 3}
