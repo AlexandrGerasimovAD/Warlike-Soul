@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9683a0b2d9720e148902be6abd394704, type: 3}
   m_Name: skeleton
   m_EditorClassIdentifier: 
-  _minDistance: 4
+  _minDistance: 1.7
   _speed: 4
   _deleyAttack: 2
   _deleyActivDomageObj: 0.4
   _deleyDeActivDomageObj: 0.6
   _domage: 80
   _hp: 500
+  _deleyAtackForTrigerWalk: 2

@@ -13,6 +13,7 @@ public class goblinAttack : MonoBehaviour
     public GameObject _domageObj;
     private float _deleyActiveDomageObj;
     private float _deleyDeActiveDomageObj;
+    private float _deleyAttackForTriggerWalk;
     void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
@@ -21,6 +22,7 @@ public class goblinAttack : MonoBehaviour
         _deleyAttack = _enemy.GetComponent<EnemyInfo>()._enemyInfo._deleyAttack;
         _deleyActiveDomageObj = _enemy.GetComponent<EnemyInfo>()._enemyInfo._deleyActivDomageObj;
         _deleyDeActiveDomageObj = _enemy.GetComponent<EnemyInfo>()._enemyInfo._deleyDeActivDomageObj;
+        _deleyAttackForTriggerWalk = _enemy.GetComponent<EnemyInfo>()._enemyInfo._deleyAtackForTrigerWalk;
 
     }
     private void OnTriggerStay(Collider other)
@@ -29,7 +31,7 @@ public class goblinAttack : MonoBehaviour
         {
             _trigerForWalk.GetComponent<TrigerForWalk>()._attackDeley = true;
             _animator.SetTrigger("Atack");
-            Invoke("pushDeleyWalk", 1.3f);
+            Invoke("pushDeleyWalk",_deleyAttackForTriggerWalk);
             _atackDeley = false;
             Invoke("atakTimerDeley", _deleyAttack);
             Invoke("domageObjActive", _deleyActiveDomageObj);

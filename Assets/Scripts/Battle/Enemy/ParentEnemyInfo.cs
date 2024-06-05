@@ -11,4 +11,5 @@ public class ParentEnemyInfo : ScriptableObject
     public float _deleyDeActivDomageObj;
     public int _domage;
     public int _hp;
+    public float _deleyAtackForTrigerWalk;
 }
