@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 public class ShopSlotInfo : MonoBehaviour,IPointerClickHandler
 {

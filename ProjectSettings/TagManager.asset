@@ -8,6 +8,7 @@ TagManager:
   - obstacle
   - enemy
   - playerDomage
+  - blockWall
   layers:
   - Default
   - TransparentFX
