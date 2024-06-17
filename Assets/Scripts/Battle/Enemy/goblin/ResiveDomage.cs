@@ -30,6 +30,9 @@ public class ResiveDomage : MonoBehaviour
             _hpSlider.transform.localScale = new Vector3(0, transform.localScale.y, transform.localScale.z);
             _sliderHp = 0;
             gameObject.GetComponent<Animator>().SetBool("Die", true);
+            var _batleManager = GameObject.Find("BatleLocations").GetComponent<BatleManager>();
+            _batleManager.parent = transform.parent.parent.parent;
+            _batleManager.voidUnBlocking();
             _dieEffect.SetActive(true);
             gameObject.transform.parent.GetComponent<TrigerForWalk>()._die = true;            
             Destroy(gameObject.transform.parent.parent.gameObject, 2f);

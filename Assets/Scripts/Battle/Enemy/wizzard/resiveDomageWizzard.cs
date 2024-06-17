@@ -29,6 +29,9 @@ public class resiveDomageWizzard : MonoBehaviour
             _hpSlider.transform.localScale = new Vector3(0, transform.localScale.y, transform.localScale.z);
             _sliderHp = 0;
             gameObject.GetComponent<Animator>().SetBool("Die", true);
+            var _batleManager = GameObject.Find("BatleLocations").GetComponent<BatleManager>();
+            _batleManager.parent = transform.parent.parent.parent;
+            _batleManager.voidUnBlocking();
             _dieEffect.SetActive(true);
             gameObject.transform.parent.GetComponent<trigerForWalkWizzard>()._die = true;
             Destroy(gameObject.transform.parent.parent.gameObject, 2f);
@@ -36,6 +39,7 @@ public class resiveDomageWizzard : MonoBehaviour
         else
         {
             gameObject.transform.parent.GetComponent<trigerForWalkWizzard>()._resiveDomage = true;
+            transform.parent.parent.GetComponent<WalkToPoint>()._walkToPoin = false;
             _hpSlider.gameObject.SetActive(true);
             _hpSlider.transform.localScale = new Vector3(_sliderHp - _domage / _hp, transform.localScale.y, transform.localScale.z);
             _sliderHp = _sliderHp - _domage / _hp;

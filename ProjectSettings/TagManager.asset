@@ -9,6 +9,10 @@ TagManager:
   - enemy
   - playerDomage
   - blockWall
+  - MainEnemy
+  - walkPoint
+  - portalForBatle
+  - spawner
   layers:
   - Default
   - TransparentFX

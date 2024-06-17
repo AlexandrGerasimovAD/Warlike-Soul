@@ -14,6 +14,15 @@ public class BlockRoom : MonoBehaviour
     {
         if (other.gameObject == GameObject.FindGameObjectWithTag("Player"))
         {
+            var _parent = transform.parent;
+            for(int i = 0; i < _parent.childCount; i++)
+            {
+                if (_parent.GetChild(i).CompareTag("spawner"))
+                {
+                    _parent.GetChild(i).GetChild(0).gameObject.SetActive(true);
+                }
+            }
+            transform.parent.GetComponent<RoomInfo>()._playerEnter = true;
             var _block = transform.GetChild(0);
             _block.transform.localPosition = new Vector3(_block.transform.localPosition.x, _block.transform.localPosition.y,
             _block.transform.localPosition.z - (float)0.04);

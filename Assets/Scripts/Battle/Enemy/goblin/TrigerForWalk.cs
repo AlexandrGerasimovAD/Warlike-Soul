@@ -30,6 +30,10 @@ public class TrigerForWalk : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
+        if (transform.parent.parent.GetComponent<RoomInfo>()._playerEnter == true)
+        {
+            _PlayerEnterZone = true;
+        }
         if (Vector3.Distance(_player.transform.position, _enemy.transform.position) > _minDistance
            && _PlayerEnterZone == true && _attackDeley == false
              || _resiveDomage == true && _attackDeley == false &&

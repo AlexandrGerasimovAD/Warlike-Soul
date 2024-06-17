@@ -9,7 +9,7 @@ public class trigerForWalkWizzard : MonoBehaviour
     private Animator _animator;
     public bool _PlayerEnterZone;
     private float _minDistance;
-    private float _speed;
+    public float _speed;
     public bool _resiveDomage;
     private bool _walkToPlayer = false;
     private CharacterController _rb;
@@ -32,12 +32,16 @@ public class trigerForWalkWizzard : MonoBehaviour
         if (Vector3.Distance(_player.transform.position, _enemy.transform.position) > _minDistance
            && _PlayerEnterZone == true && _attackDeley == false
              || _resiveDomage == true && _attackDeley == false &&
-               Vector3.Distance(_player.transform.position, _enemy.transform.position) > _minDistance)
+               Vector3.Distance(_player.transform.position, _enemy.transform.position) > _minDistance
+               ||transform.parent.GetComponent<WalkToPoint>()._walkToPoin==true)
         // если скрипт получил задержку для атаки то движение не возможно пока он снова не получит задержка окончена
         //если растояние между игроком и врагом больше distance то идти к игроку
         //или если враг получил урон и растояние больше минимального то идти к игроку
         {
-            _walkToPlayer = true;
+            if(transform.parent.GetComponent<WalkToPoint>()._walkToPoin == false)
+            {
+             _walkToPlayer = true;
+            }            
             _animator.SetBool("Walk", true);
         }
         else//если расстояние меньше distance то остановить анимацию ходьбы
@@ -66,6 +70,7 @@ public class trigerForWalkWizzard : MonoBehaviour
         if (other.gameObject == _player)
         {
             _PlayerEnterZone = true;
+            transform.parent.GetComponent<WalkToPoint>()._walkToPoin = false;
         }
     }
 }

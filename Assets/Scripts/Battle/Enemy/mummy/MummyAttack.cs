@@ -19,9 +19,12 @@ public class MummyAttack : MonoBehaviour
     {
         if (other.gameObject == _player)
         {
-           _effectAttack.SetActive(true);
+            var _batleManager = GameObject.Find("BatleLocations").GetComponent<BatleManager>();
+            _batleManager.parent =_enemy.transform.parent.parent.parent;
+            _batleManager.voidUnBlocking();
+            _effectAttack.SetActive(true);
             _effectAttack.transform.SetParent(_enemy.transform.parent.parent.parent);
-            _hpPlayer.GetComponent<HpSlider>().addHp(-_enemy.GetComponent<EnemyInfo>()._enemyInfo._domage);
+            _hpPlayer.GetComponent<HpSlider>().addHp(-_enemy.GetComponent<EnemyInfo>()._enemyInfo._domage);           
             Destroy(_enemy.transform.parent.parent.gameObject);
         }
     }

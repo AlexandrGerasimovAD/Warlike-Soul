@@ -29,6 +29,9 @@ public class resiveDomageTroll : MonoBehaviour
             _hpSlider.transform.localScale = new Vector3(0, transform.localScale.y, transform.localScale.z);
             _sliderHp = 0;
             gameObject.GetComponent<Animation>().Play("Die");
+            var _batleManager = GameObject.Find("BatleLocations").GetComponent<BatleManager>();
+            _batleManager.parent = transform.parent.parent;
+            _batleManager.voidUnBlocking();
             _dieEffect.SetActive(true);
             _dieEffect.transform.SetParent(gameObject.transform.parent.parent);
             gameObject.transform.parent.GetComponent<trigerForWalk>()._die = true;

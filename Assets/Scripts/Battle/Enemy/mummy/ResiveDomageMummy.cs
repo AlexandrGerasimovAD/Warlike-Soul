@@ -28,6 +28,9 @@ public class ResiveDomageMummy : MonoBehaviour
         {
             _hpSlider.transform.localScale = new Vector3(0, transform.localScale.y, transform.localScale.z);
             _sliderHp = 0;
+            var _batleManager = GameObject.Find("BatleLocations").GetComponent<BatleManager>();
+            _batleManager.parent = transform.parent.parent.parent;
+            _batleManager.voidUnBlocking();
             _dieEffect.SetActive(true);
             _dieEffect.transform.SetParent(transform.parent.parent.parent);
             gameObject.transform.parent.GetComponent<TrigerForWalk>()._die = true;
