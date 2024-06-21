@@ -52,6 +52,14 @@ public class PortalForBase : MonoBehaviour
                 _spawn.transform.localPosition = transform.parent.localPosition;
                 Destroy(transform.parent.parent.parent.gameObject);
             }
+            if (_name == "Base")
+            {
+                var _location = GameObject.Find("BatleReserv").transform.GetChild(3).gameObject;
+                var _spawn = Instantiate(_location);
+                _spawn.transform.SetParent(transform.parent.parent.parent.parent);
+                _spawn.transform.localPosition = transform.parent.localPosition;
+                Destroy(transform.parent.parent.parent.gameObject);
+            }
         }
     }
 }

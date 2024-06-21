@@ -12,10 +12,10 @@ public class LoadSave : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _parentFastSlot = GameObject.Find("InventoryPanel");
-        _parentChestSlot = GameObject.Find("chest").transform.GetChild(0).GetChild(1).gameObject;
-        loadFastSlot();//загрузка при запуске игры
-        loadChest();//загрузка сундука при запуске игры
+       _parentFastSlot = GameObject.Find("InventoryPanel");
+       _parentChestSlot = GameObject.Find("chest").transform.GetChild(0).GetChild(1).gameObject;
+       loadFastSlot();//загрузка при запуске игры
+       loadChest();//загрузка сундука при запуске игры
     }
  public void saveFastSlot()
     {
@@ -93,7 +93,7 @@ public class LoadSave : MonoBehaviour
     public void loadChest()
     {
         var _items = Resources.LoadAll<parentItemInfo>("ItemScript");//загружаю все итемы из папки
-        for (int j = 0; j <= _parentChestSlot.transform.childCount; j++)//проверяю каждый слот
+        for (int j = 0;j< _parentChestSlot.transform.childCount; j++)//проверяю каждый слот
         {
             var _getId = PlayerPrefs.GetInt("saveChestSlot" + j);
             var _countItem = PlayerPrefs.GetInt("saveCountChest" + j);

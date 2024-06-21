@@ -20,8 +20,9 @@ MonoBehaviour:
   _heel: 0
   countItem: 1
   maxCount: 1
-  damage: 50
+  damage: 1000
   delayShot: 1
+  _byCount: 0
   descriptionItem: 
   prefabforPlayer: {fileID: 417691047774336563, guid: ae52bb8cf3114c842932e68225b3aeab, type: 3}
   prefabforLocation: {fileID: 5067392323515887848, guid: c546d9942622b9e479260d9b418c9590, type: 3}
