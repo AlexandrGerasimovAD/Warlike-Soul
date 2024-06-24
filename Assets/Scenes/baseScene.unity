@@ -15303,7 +15303,7 @@ Transform:
   m_GameObject: {fileID: 568951943}
   serializedVersion: 2
   m_LocalRotation: {x: 0.07361777, y: -0, z: -0, w: 0.99728656}
-  m_LocalPosition: {x: 2, y: 5.6, z: 14.4}
+  m_LocalPosition: {x: 2, y: 5.38, z: 14.4}
   m_LocalScale: {x: 0.50791, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58264,10 +58264,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossGenerate
       objectReference: {fileID: 0}
-    - target: {fileID: 4921755902550178742, guid: f7897a45fe1d89a44ab12ef4e79e4920, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8761743530683950584, guid: f7897a45fe1d89a44ab12ef4e79e4920, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -58426,22 +58422,6 @@ PrefabInstance:
     - target: {fileID: 4715449671115286404, guid: 9497c12cf3d5bdf49b508b2dfae67fb7, type: 3}
       propertyPath: m_Name
       value: Generation1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5848965437998144949, guid: 9497c12cf3d5bdf49b508b2dfae67fb7, type: 3}
-      propertyPath: _nameNext
-      value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 5848965437998144949, guid: 9497c12cf3d5bdf49b508b2dfae67fb7, type: 3}
-      propertyPath: _countEnemy
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5848965437998144949, guid: 9497c12cf3d5bdf49b508b2dfae67fb7, type: 3}
-      propertyPath: _maxCountRoom
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5848965437998144949, guid: 9497c12cf3d5bdf49b508b2dfae67fb7, type: 3}
-      propertyPath: _minCountEnemy
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7364631535065802398, guid: 9497c12cf3d5bdf49b508b2dfae67fb7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -58666,18 +58646,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Generation2
       objectReference: {fileID: 0}
-    - target: {fileID: 8183951376738438731, guid: 028a37ea9c7474d42bd19ca42c3bb74d, type: 3}
-      propertyPath: _countEnemy
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8183951376738438731, guid: 028a37ea9c7474d42bd19ca42c3bb74d, type: 3}
-      propertyPath: _maxCountRoom
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8183951376738438731, guid: 028a37ea9c7474d42bd19ca42c3bb74d, type: 3}
-      propertyPath: _minCountEnemy
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -58730,22 +58698,6 @@ PrefabInstance:
     - target: {fileID: 584066221136578631, guid: 250fcedd795352d4896600ebceaff1ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306192084629684064, guid: 250fcedd795352d4896600ebceaff1ae, type: 3}
-      propertyPath: _nameNext
-      value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306192084629684064, guid: 250fcedd795352d4896600ebceaff1ae, type: 3}
-      propertyPath: _countEnemy
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306192084629684064, guid: 250fcedd795352d4896600ebceaff1ae, type: 3}
-      propertyPath: _maxCountRoom
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2306192084629684064, guid: 250fcedd795352d4896600ebceaff1ae, type: 3}
-      propertyPath: _minCountEnemy
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2501398539783581875, guid: 250fcedd795352d4896600ebceaff1ae, type: 3}
       propertyPath: m_Name

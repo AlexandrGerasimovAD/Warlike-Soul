@@ -20,7 +20,7 @@ MonoBehaviour:
   _heel: 0
   countItem: 1
   maxCount: 1
-  damage: 1000
+  damage: 200
   delayShot: 1
   _byCount: 0
   descriptionItem: 

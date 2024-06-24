@@ -50,3 +50,4 @@ MonoBehaviour:
   _countRoom: 0
   _countEnemy: 7
   _minCountEnemy: 5
+  _nameNext: Boss
