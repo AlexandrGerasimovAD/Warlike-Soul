@@ -213,11 +213,22 @@ public class slotInfo : MonoBehaviour,IPointerClickHandler
                     _buttomAtack.GetComponent<AttackButtom>()._deley = _item.delayShot;
                     _buttomAtack.GetComponent<AttackButtom>()._domage = _item.damage;
                     _buttomAtack.GetComponent<AttackButtom>()._prefabShot = _item.prefabShot;
+                    _buttomAtack.GetComponent<AttackButtom>()._tupeWeapoon =2;
                 }
                 if (gameObject.GetComponent<slotInfo>()._typeWeapoon == 3)
                 {
                     //включаем анимацию для автомата
+                    var _item = gameObject.GetComponent<slotInfo>()._prefabForPlayer.GetComponent<itemInfo>().item;//инфо оружия
                     _animator.SetInteger("typeWeapoon", 3);
+                    var _spawn = Instantiate(gameObject.GetComponent<slotInfo>()._prefabForPlayer);
+                    _spawn.transform.SetParent(_hand.transform);
+                    _spawn.transform.localPosition = new Vector3(_hand.transform.localPosition.x, _hand.transform.localPosition.y,
+                    _hand.transform.localPosition.z);
+                    _spawn.transform.localRotation = Quaternion.Euler(30, -60, -90);//настройка поворота
+                    _buttomAtack.GetComponent<AttackButtom>()._deley = _item.delayShot;
+                    _buttomAtack.GetComponent<AttackButtom>()._domage = _item.damage;
+                    _buttomAtack.GetComponent<AttackButtom>()._prefabShot = _item.prefabShot;
+                    _buttomAtack.GetComponent<AttackButtom>()._tupeWeapoon = 3;
                 }
             }
         }

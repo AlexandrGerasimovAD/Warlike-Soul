@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d142150440ab46bcdacf3f28f960f, type: 3}
+  m_Name: AK-47
+  m_EditorClassIdentifier: 
+  nameItem: AK-47
+  id: 4
+  _rashodnik: 0
+  _gameItem: 1
+  _typeWeapoon: 3
+  _heel: 0
+  countItem: 1
+  maxCount: 1
+  damage: 115
+  delayShot: 0.9
+  _byCount: 500
+  descriptionItem: "\u043D\u0435 \u043F\u043B\u043E\u0445\u043E\u0439 \u0443\u0440\u043E\u043D\n\u043D\u0435
+    \u043F\u043B\u043E\u0445\u0430\u044F \n\u0441\u043A\u043E\u0440\u043E\u0441\u0442\u0440\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C"
+  prefabforPlayer: {fileID: 7230330404777747965, guid: 49339d9a3c5dc3243a845099e0ed9b25, type: 3}
+  prefabforLocation: {fileID: 215312178003647452, guid: 78e31560df8778f48a756aab95e0da24, type: 3}
+  prefabShot: {fileID: 4921864004964677031, guid: 7707b1173594fa843b389e1b8899ed35, type: 3}
+  Icon: {fileID: 21300000, guid: b84044140cb784141b01f7cb207ad750, type: 3}

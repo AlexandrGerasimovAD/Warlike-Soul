@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class AttackButtom : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
 {
+    public int _tupeWeapoon;
     public float _deley;
     public float _domage;
     public GameObject _prefabShot;
@@ -18,6 +19,7 @@ public class AttackButtom : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     private Animator _animator;
     private Transform _xAngle;
     private GameObject _fireEffect;
+    private GameObject _automatFireEffect;
 
     void Start()
     {
@@ -26,6 +28,7 @@ public class AttackButtom : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
         _cam = GameObject.Find("Main Camera");
         _animator = _player.GetComponent<Animator>();
         _fireEffect = GameObject.Find("pistolFire").transform.GetChild(0).gameObject;
+        _automatFireEffect = GameObject.Find("AutomatFire").transform.GetChild(0).gameObject;
     }
 
     void Update()
@@ -39,11 +42,22 @@ public class AttackButtom : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
             {//выстрел на сцене                
                 _xAngle = _cam.transform;               
                 _animator.SetTrigger("atack");
-                var _shotEffect = Instantiate(_fireEffect);//эффект при выстреле
-                _shotEffect.transform.SetParent(_hand.transform.GetChild(0));
-                _shotEffect.transform.position = _hand.transform.GetChild(0).transform.position;
-                _shotEffect.transform.localScale = new Vector3((float)2, (float)2, (float)2);
-                _shotEffect.gameObject.SetActive(true);
+                if (_tupeWeapoon == 2)
+                {
+                    var _shotEffect = Instantiate(_fireEffect);//эффект при выстрелe
+                    _shotEffect.transform.SetParent(_hand.transform.GetChild(0));
+                    _shotEffect.transform.position = _hand.transform.GetChild(0).transform.position;
+                    _shotEffect.transform.localScale = new Vector3((float)2, (float)2, (float)2);
+                    _shotEffect.gameObject.SetActive(true);
+                }
+                if (_tupeWeapoon == 3)
+                {
+                    var _shotEffect = Instantiate(_automatFireEffect);//эффект при выстрелe
+                    _shotEffect.transform.SetParent(_hand.transform.GetChild(0));
+                    _shotEffect.transform.position = _hand.transform.GetChild(0).transform.position;
+                    _shotEffect.transform.localScale = new Vector3((float)0.03, (float)0.03, (float)0.03);
+                    _shotEffect.gameObject.SetActive(true);
+                }
                 var _shot = Instantiate(_prefabShot,_xAngle);//что спавним под каким углом спавним,сам патрон
                 _shot.transform.SetParent(_player.transform.parent);
                 _shot.transform.position = _hand.transform.position;
@@ -62,6 +76,7 @@ public class AttackButtom : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     }
     public void OnPointerDown(PointerEventData eventData)
     {
+        _animator.SetBool("notAttack", false);
         _timer = _deley;
         _buttom = true;        
     }
@@ -70,5 +85,6 @@ public class AttackButtom : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     {
         _buttom = false;
         _isTimeOff = false;
+        _animator.SetBool("notAttack",true);
     }
 }
