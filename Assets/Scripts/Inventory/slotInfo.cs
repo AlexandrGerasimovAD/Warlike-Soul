@@ -198,7 +198,19 @@ public class slotInfo : MonoBehaviour,IPointerClickHandler
                 if (gameObject.GetComponent<slotInfo>()._typeWeapoon == 1)
                 {
                     //включаем анимацию для мечей
+                    var _item = gameObject.GetComponent<slotInfo>()._prefabForPlayer.GetComponent<itemInfo>().item;//инфо оружия
                     _animator.SetInteger("typeWeapoon", 1);
+                    var _spawn = Instantiate(gameObject.GetComponent<slotInfo>()._prefabForPlayer);
+                    _spawn.transform.SetParent(_hand.transform);
+                    _spawn.transform.localPosition = new Vector3(_hand.transform.localPosition.x+ (float)0.004
+                        , _hand.transform.localPosition.y,
+                    _hand.transform.localPosition.z-(float)0.004);
+                    _spawn.transform.localRotation = Quaternion.Euler(90, 0, 60);//настройка поворота
+                    _buttomAtack.GetComponent<AttackButtom>()._deley = _item.delayShot;
+                    _buttomAtack.GetComponent<AttackButtom>()._domage = _item.damage;
+                    _buttomAtack.GetComponent<AttackButtom>()._prefabShot = _item.prefabShot;
+                    _buttomAtack.GetComponent<AttackButtom>()._tupeWeapoon = 1;
+
                 }
                 if (gameObject.GetComponent<slotInfo>()._typeWeapoon == 2)
                 {

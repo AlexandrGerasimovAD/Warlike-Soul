@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: skeleton
   m_EditorClassIdentifier: 
   _minDistance: 1.7
-  _speed: 4
+  _speed: 8
   _deleyAttack: 2
   _deleyActivDomageObj: 0.4
   _deleyDeActivDomageObj: 0.6
   _domage: 80
-  _hp: 500
+  _hp: 1500
   _deleyAtackForTrigerWalk: 2

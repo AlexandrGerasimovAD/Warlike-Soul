@@ -22,6 +22,10 @@ public class ResiveDomage : MonoBehaviour
         {
             domageForEnemySlider(other.gameObject.GetComponent<Patron>()._domage);
         }
+        if (other.gameObject.CompareTag("swordDomage"))
+        {
+            domageForEnemySlider(other.gameObject.GetComponent<DomageObjForPlayer>()._domage);
+        }
     }
     private void domageForEnemySlider(float _domage)
     {

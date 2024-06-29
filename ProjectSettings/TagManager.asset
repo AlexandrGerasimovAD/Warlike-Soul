@@ -12,7 +12,7 @@ TagManager:
   - MainEnemy
   - walkPoint
   - portalForBatle
-  - spawner
+  - swordDomage
   layers:
   - Default
   - TransparentFX

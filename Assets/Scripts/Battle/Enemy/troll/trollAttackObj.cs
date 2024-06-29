@@ -52,7 +52,8 @@ public class trollAttackObj : MonoBehaviour
     }
     private void setBall()
     {
-        var _ball = Instantiate(_atackObj, _spawnPoint);
+        var _ball = Instantiate(_atackObj,_spawnPoint);
+        _ball.transform.SetParent(_player.transform.parent);
         _ball.gameObject.SetActive(true);
         _ball.GetComponent<fireBall>()._domage = _enemy.GetComponent<EnemyInfo>()._enemyInfo._domage;
         Destroy(_ball, 3);

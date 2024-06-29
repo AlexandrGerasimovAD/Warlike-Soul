@@ -122,6 +122,25 @@ public class DevilBattle : MonoBehaviour
                 }
             }
         }
+        if (other.gameObject.CompareTag("swordDomage"))
+        {
+            if (_resiveDomage == true)
+            {
+                GameObject.Find("bossHp").transform.GetChild(0).gameObject.SetActive(true);
+                var _domage = other.gameObject.GetComponent<DomageObjForPlayer>()._domage;
+                _hpSlider.value -= _domage / 10000;
+                if (_hpSlider.value == 0)
+                {
+                    GameObject.Find("bossHp").transform.GetChild(0).gameObject.SetActive(false);
+                    onPortalBase();
+                    //запуск панели результатов
+                    _die = true;
+                    _animator.SetBool("Die", true);
+                    _active = false;
+                    Destroy(gameObject, 2);
+                }
+            }
+        }
     }
     private void onPortalBase()
     {
