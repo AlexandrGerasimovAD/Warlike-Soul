@@ -22,7 +22,7 @@ public class DevilBattle : MonoBehaviour
     {
         _player = GameObject.FindGameObjectWithTag("Player");
         _animator = GetComponent<Animator>();
-        _hpSlider = GameObject.Find("bossHp").transform.GetChild(0).GetChild(1).GetComponent<Slider>();
+        _hpSlider = GameObject.Find("bossHp").transform.GetChild(0).GetChild(1).GetComponent<Slider>();       
     }
 
     private void FixedUpdate()
@@ -114,6 +114,7 @@ public class DevilBattle : MonoBehaviour
                 {
                     GameObject.Find("bossHp").transform.GetChild(0).gameObject.SetActive(false);
                     onPortalBase();
+                    bossDrop();
                     //запуск панели результатов
                     _die = true;
                     _animator.SetBool("Die", true);
@@ -165,4 +166,14 @@ public class DevilBattle : MonoBehaviour
     {
         _effectForAttack1.SetActive(false);
     }  
+    private void bossDrop()
+    {
+        for(int i = 0; i < transform.parent.childCount; i++)
+        {
+            if (transform.parent.GetChild(i).CompareTag("spawner"))
+            {
+                transform.parent.GetChild(i).GetComponent<bossSpawnWin>().enabled = true;
+            }
+        }
+    }
 }

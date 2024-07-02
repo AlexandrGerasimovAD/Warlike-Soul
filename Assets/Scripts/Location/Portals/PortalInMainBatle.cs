@@ -20,6 +20,7 @@ public class PortalInMainBatle : MonoBehaviour
     {
         if (other.gameObject == _player)
         {
+            GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
             _player.GetComponent<CharacterController>().enabled = false;
             //_roomEnterence.SetActive(true);
             GameObject.Find("BatleLevel1").transform.GetChild(0).gameObject.SetActive(true);

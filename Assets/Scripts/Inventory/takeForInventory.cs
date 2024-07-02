@@ -24,31 +24,30 @@ public class takeForInventory : MonoBehaviour
         _flip2 = GameObject.Find("flip2");
         _flip3 = GameObject.Find("flip3");
         _flip4 = GameObject.Find("flip4");
-        _position = gameObject.transform.localPosition.y * 1.2f;
-        _offPosition = gameObject.transform.localPosition.y / 1.2f;      
+        _position = gameObject.transform.position.y + 1.1f;
+        _offPosition = gameObject.transform.position.y - 1.1f;
     }
     private void FixedUpdate()
     {
         if (_upTransform == true)
         {
-            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y + 0.014f,
-            transform.localPosition.z);
-            if (transform.localPosition.y > _position)
+            transform.position = new Vector3(transform.position.x, transform.position.y + 0.02f,
+            transform.position.z);
+            if (transform.position.y > _position)
             {
                 _upTransform = false;
             }
-
         }
-        else
+        if (_upTransform == false)
         {
-            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y - 0.014f,
-            transform.localPosition.z);
-            if (transform.localPosition.y < _offPosition)
+            transform.position = new Vector3(transform.position.x, transform.position.y - 0.02f,
+            transform.position.z);
+            if (transform.position.y < _offPosition)
             {
                 _upTransform = true;
             }
         }
-       
+
     }
     private void OnTriggerEnter(Collider other)
     {        

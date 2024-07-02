@@ -20,6 +20,7 @@ public class PortalForBase : MonoBehaviour
     {
         if (other.gameObject == _player)
         {
+            GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
             _player.GetComponent<CharacterController>().enabled = false;
             _base.transform.GetChild(0).gameObject.SetActive(true);
             _player.transform.SetParent(_base.transform);

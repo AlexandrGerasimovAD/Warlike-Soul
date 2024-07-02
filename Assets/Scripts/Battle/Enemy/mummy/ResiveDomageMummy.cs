@@ -8,6 +8,7 @@ public class ResiveDomageMummy : MonoBehaviour
     private float _hp;
     private float _sliderHp = 1;
     public GameObject _dieEffect;
+    private bool _localDie = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,19 +29,21 @@ public class ResiveDomageMummy : MonoBehaviour
     }
     private void domageForEnemySlider(float _domage)
     {
-        if (_sliderHp - _domage / _hp < 0)
+        if (_sliderHp - _domage / _hp <= 0 && _localDie == false)
         {
+            _localDie = true;
             _hpSlider.transform.localScale = new Vector3(0, transform.localScale.y, transform.localScale.z);
             _sliderHp = 0;
             var _batleManager = GameObject.Find("BatleLocations").GetComponent<BatleManager>();
             _batleManager.parent = transform.parent.parent.parent;
-            _batleManager.voidUnBlocking();
+            _batleManager.voidUnBlocking();           
             _dieEffect.SetActive(true);
             _dieEffect.transform.SetParent(transform.parent.parent.parent);
-            gameObject.transform.parent.GetComponent<TrigerForWalk>()._die = true;
+            gameObject.transform.parent.GetComponent<TrigerForWalk>()._die = true;           
+                _batleManager.dropItem(gameObject.transform, 25, transform.parent.parent.parent);           
             Destroy(gameObject.transform.parent.parent.gameObject);
         }
-        else
+        else if(_localDie==false)
         {
             gameObject.transform.parent.GetComponent<TrigerForWalk>()._resiveDomage = true;
             _hpSlider.gameObject.SetActive(true);
