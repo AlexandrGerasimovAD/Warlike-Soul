@@ -51,7 +51,7 @@ public class BatleManager : MonoBehaviour
     }
     public void dropItem(Transform _point,int _coinCount,Transform _parent)
     {
-        var _randomInt = UnityEngine.Random.Range(1, 20);
+        var _randomInt = UnityEngine.Random.Range(1, 15);
         if (_randomInt == 2 || _randomInt == 6 || _randomInt == 10)
         {
             //spawn item

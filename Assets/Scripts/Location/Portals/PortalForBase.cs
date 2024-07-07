@@ -44,6 +44,7 @@ public class PortalForBase : MonoBehaviour
                 _spawn.transform.SetParent(transform.parent.parent.parent.parent);
                 _spawn.transform.localPosition = transform.parent.localPosition;
                 Destroy(transform.parent.parent.parent.gameObject);
+                GameObject.Find("WinMainPanel").GetComponent<WinPanel>().OpenWinPanel();
             }
             if (_name == "Boss")
             {
@@ -52,6 +53,7 @@ public class PortalForBase : MonoBehaviour
                 _spawn.transform.SetParent(transform.parent.parent.parent.parent);
                 _spawn.transform.localPosition = transform.parent.localPosition;
                 Destroy(transform.parent.parent.parent.gameObject);
+                GameObject.Find("WinMainPanel").GetComponent<WinPanel>().OpenWinPanel();
             }
             if (_name == "Base")
             {
@@ -60,6 +62,7 @@ public class PortalForBase : MonoBehaviour
                 _spawn.transform.SetParent(transform.parent.parent.parent.parent);
                 _spawn.transform.localPosition = transform.parent.localPosition;
                 Destroy(transform.parent.parent.parent.gameObject);
+                GameObject.Find("WinMainPanel").GetComponent<WinPanel>().OpenWinPanel();
             }
         }
     }

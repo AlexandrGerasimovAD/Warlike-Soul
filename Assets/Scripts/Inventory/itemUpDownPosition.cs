@@ -47,6 +47,7 @@ public class itemUpDownPosition : MonoBehaviour
     {
         if (other.gameObject == _player)
         {
+            GameObject.Find("AbsManager").GetComponent<RewardCountManager>()._coinCount += _coinCount;
             var _getCoin = PlayerPrefs.GetInt("mainCoinSave");
             PlayerPrefs.SetInt("mainCoinSave", _getCoin + _coinCount);
             var _pushCoin= PlayerPrefs.GetInt("mainCoinSave");
