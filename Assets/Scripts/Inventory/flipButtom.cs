@@ -40,6 +40,7 @@ public class flipButtom : MonoBehaviour,IPointerUpHandler,IPointerDownHandler
             _slotParent._full = false;
             _slotParent._itemIndex = _item.item.id;
             _slotParent._maxCount = _item.item.maxCount;
+            _slotParent._typeWeapoon = _item.item._typeWeapoon;
             _slotParent._prefabForPlayer = _item.item.prefabforPlayer;
             _slotParent._prefabForLocation = _item.item.prefabforLocation;
             var _icon = gameObject.transform.parent.GetChild(0);

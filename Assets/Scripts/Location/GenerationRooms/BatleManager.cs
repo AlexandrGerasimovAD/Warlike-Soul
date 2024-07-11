@@ -61,7 +61,7 @@ public class BatleManager : MonoBehaviour
             _item.transform.SetParent(_parent.transform);
             _item.transform.position = new Vector3(_point.position.x, _point.position.y + (float)1.5, _point.position.z);
         }
-        if (_randomInt == 4 || _randomInt == 11)
+        if (_randomInt == 4 || _randomInt == 1)
         {
             // spawn potion
             int _potionIndex = UnityEngine.Random.Range(0, potionList.Count);
@@ -70,7 +70,7 @@ public class BatleManager : MonoBehaviour
             _potion.transform.SetParent(_parent.transform);
             _potion.transform.position = new Vector3(_point.position.x, _point.position.y + (float)1.5, _point.position.z);
         }
-        if (_randomInt == 1 || _randomInt == 8)
+        if (_randomInt == 3 || _randomInt == 8 || _randomInt == 11 || _randomInt == 5)
         {
             //spawn coin
             var _spawn = Instantiate(_coin);

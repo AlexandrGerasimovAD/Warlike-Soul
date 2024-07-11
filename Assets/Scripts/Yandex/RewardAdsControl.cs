@@ -6,7 +6,6 @@ using UnityEditor;
 using UnityEngine;
 using YandexMobileAds;
 using YandexMobileAds.Base;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
 
     public class RewardAdsControl : MonoBehaviour
     {
