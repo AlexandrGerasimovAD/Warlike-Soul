@@ -30,6 +30,7 @@ public class movePlayer : MonoBehaviour
         {
             move();
         }
+        
     }
     private void move()
     {
@@ -54,6 +55,7 @@ public class movePlayer : MonoBehaviour
         else
         {
             _runEffect.transform.GetChild(0).gameObject.SetActive(false);
+            
         }
         if (_joystick.Horizontal == 0 && _joystick.Vertical == 0)//анимирование передвижения в зависимости от значений джойстик
         {
