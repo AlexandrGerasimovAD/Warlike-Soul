@@ -31,6 +31,7 @@ public class PortalForBase : MonoBehaviour
             gameObject.transform.parent.parent.gameObject.SetActive(false);
             if (_name == "BatleLevel2")
             {
+                GameObject.Find("ParentLoadingPanel").GetComponent<loadingManager>().openLoadingPanel();
                 var _location = GameObject.Find("BatleReserv").transform.GetChild(0).gameObject;
                 var _spawn = Instantiate(_location);
                 _spawn.transform.SetParent(transform.parent.parent.parent.parent);

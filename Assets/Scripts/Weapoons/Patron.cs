@@ -12,6 +12,7 @@ public class Patron : MonoBehaviour
     {
         _collizionEffect = gameObject.transform.GetChild(0).gameObject;
         Destroy(gameObject, 2);
+        GameObject.Find("standartShotSound").GetComponent<AudioSource>().Play();
     }
 
     // Update is called once per frame

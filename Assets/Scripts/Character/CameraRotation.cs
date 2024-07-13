@@ -22,6 +22,10 @@ public class CameraRotation : MonoBehaviour
         _yAngle = transform.localRotation.eulerAngles.y;
         _player = GameObject.FindWithTag("Player");
         _animator = _player.GetComponent<Animator>();
+        if (PlayerPrefs.GetInt("cameraSpeedX") != 0)
+        {
+            _speedToX = PlayerPrefs.GetInt("cameraSpeedX");
+        } 
     }
     void Update()
     {

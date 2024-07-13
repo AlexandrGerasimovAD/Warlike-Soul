@@ -23,6 +23,7 @@ public class PortalInMainBatle : MonoBehaviour
     {
         if (other.gameObject == _player)
         {
+            GameObject.Find("ParentLoadingPanel").GetComponent<loadingManager>().openLoadingPanel();
             GameObject.Find("AbsManager").GetComponent<RewardCountManager>()._coinCount = 0;
             GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
             _player.GetComponent<CharacterController>().enabled = false;

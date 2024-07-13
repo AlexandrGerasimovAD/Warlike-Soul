@@ -20,6 +20,7 @@ public class PortalNextBatle : MonoBehaviour
     {
         if (other.gameObject == _player)
         {
+            GameObject.Find("ParentLoadingPanel").GetComponent<loadingManager>().openLoadingPanel();
             GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
             _player.GetComponent<CharacterController>().enabled = false;
             _roomEnterence.SetActive(true);

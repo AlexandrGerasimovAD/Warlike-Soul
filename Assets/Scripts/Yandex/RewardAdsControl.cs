@@ -85,6 +85,7 @@ using YandexMobileAds.Base;
         Debug.Log(message: ">>> YandexAbs OnAdDismissed");
         DestroyRewerdedAd();
         RequestRewardAd();
+       
     }
     public void HandleAdRewarded(object sender, Reward args)//в момент начисления награды
     {
