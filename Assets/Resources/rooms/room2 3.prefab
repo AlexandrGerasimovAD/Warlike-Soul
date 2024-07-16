@@ -31525,7 +31525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447439131293856139, guid: e420f055afaaa1844b459403e2a55320, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0057
+      value: 0.0035
       objectReference: {fileID: 0}
     - target: {fileID: 1447439131293856139, guid: e420f055afaaa1844b459403e2a55320, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31558,6 +31558,10 @@ PrefabInstance:
     - target: {fileID: 4072672406199312333, guid: e420f055afaaa1844b459403e2a55320, type: 3}
       propertyPath: m_Name
       value: coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5047698717973102366, guid: e420f055afaaa1844b459403e2a55320, type: 3}
+      propertyPath: _coinCount
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

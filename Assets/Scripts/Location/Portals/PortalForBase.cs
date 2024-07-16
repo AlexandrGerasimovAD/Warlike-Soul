@@ -8,7 +8,6 @@ public class PortalForBase : MonoBehaviour
     private GameObject _base;
     private GameObject _cam;
     private string _name;
-    // Start is called before the first frame update
     void Start()
     {
         _name = transform.parent.parent.parent.GetComponent<StartGenerationRooms>()._nameNext;
@@ -20,8 +19,8 @@ public class PortalForBase : MonoBehaviour
     {
         if (other.gameObject == _player)
         {
-            GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
-            _player.GetComponent<CharacterController>().enabled = false;
+            GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();//сохраняем слоты
+            _player.GetComponent<CharacterController>().enabled = false;//телепортируем игрока
             _base.transform.GetChild(0).gameObject.SetActive(true);
             _player.transform.SetParent(_base.transform);
             _cam.transform.SetParent(_base.transform);

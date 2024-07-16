@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AUG
   m_EditorClassIdentifier: 
   nameItem: AUG
-  id: 7
+  id: 17
   _rashodnik: 0
   _gameItem: 1
   _typeWeapoon: 3

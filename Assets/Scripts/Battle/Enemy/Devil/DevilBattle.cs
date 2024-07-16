@@ -109,7 +109,7 @@ public class DevilBattle : MonoBehaviour
             {
                 GameObject.Find("bossHp").transform.GetChild(0).gameObject.SetActive(true);
                 var _domage = other.gameObject.GetComponent<Patron>()._domage;
-                _hpSlider.value -= _domage / 10000;
+                _hpSlider.value -= _domage / 12000;
                 if (_hpSlider.value == 0)
                 {
                     GameObject.Find("bossHp").transform.GetChild(0).gameObject.SetActive(false);
@@ -129,11 +129,12 @@ public class DevilBattle : MonoBehaviour
             {
                 GameObject.Find("bossHp").transform.GetChild(0).gameObject.SetActive(true);
                 var _domage = other.gameObject.GetComponent<DomageObjForPlayer>()._domage;
-                _hpSlider.value -= _domage / 10000;
+                _hpSlider.value -= _domage / 12000;
                 if (_hpSlider.value == 0)
                 {
                     GameObject.Find("bossHp").transform.GetChild(0).gameObject.SetActive(false);
                     onPortalBase();
+                    bossDrop();
                     //запуск панели результатов
                     _die = true;
                     _animator.SetBool("Die", true);
@@ -170,7 +171,7 @@ public class DevilBattle : MonoBehaviour
     {
         for(int i = 0; i < transform.parent.childCount; i++)
         {
-            if (transform.parent.GetChild(i).CompareTag("spawner"))
+            if (transform.parent.GetChild(i).CompareTag("bossDrop"))
             {
                 transform.parent.GetChild(i).GetComponent<bossSpawnWin>().enabled = true;
             }

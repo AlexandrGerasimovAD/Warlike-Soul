@@ -20,6 +20,7 @@ public class portalBossInBase : MonoBehaviour
         {
             GameObject.Find("LoadSaveManager").GetComponent<LoadSave>().saveFastSlot();
             GameObject.Find("WinMainPanel").GetComponent<WinPanel>().OpenWinPanel();
+            GameObject.Find("playerHpSlider").GetComponent<HpSlider>().rewardHp();
             _player.GetComponent<CharacterController>().enabled = false;
             _base.transform.GetChild(0).gameObject.SetActive(true);
             _player.transform.SetParent(_base.transform);
@@ -32,7 +33,6 @@ public class portalBossInBase : MonoBehaviour
             _spawn.transform.SetParent(transform.parent.parent.parent.parent.parent);
             _spawn.transform.localPosition = transform.parent.localPosition;
             Destroy(gameObject.transform.parent.parent.parent.parent.gameObject);
-
         }
     }
 }

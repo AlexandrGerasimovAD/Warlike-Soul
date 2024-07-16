@@ -140,7 +140,7 @@ public class HpSlider : MonoBehaviour
         }
         Invoke("rewardHp", 1);
     }
-    private void rewardHp()
+    public void rewardHp()
     {
         _slider.value = 1;
         _hpCount = 1000;

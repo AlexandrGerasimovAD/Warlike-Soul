@@ -18,8 +18,8 @@ public class ExitEnterenceRoom : MonoBehaviour
         GameObject room = roomsList[enemiIndex];
         var _room = Instantiate(room);
         _room.transform.SetParent(transform.parent.parent);
-        _room.transform.localPosition = new Vector3(transform.localPosition.x-6, transform.localPosition.y
-         , transform.localPosition.z+90);
+        _room.transform.position = new Vector3(transform.position.x-27, transform.position.y
+         , transform.position.z+47);
         Destroy(gameObject);
     }
 

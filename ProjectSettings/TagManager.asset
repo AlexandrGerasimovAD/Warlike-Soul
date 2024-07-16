@@ -13,6 +13,8 @@ TagManager:
   - walkPoint
   - portalForBatle
   - swordDomage
+  - spawner
+  - bossDrop
   layers:
   - Default
   - TransparentFX

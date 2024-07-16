@@ -72282,7 +72282,7 @@ GameObject:
   - component: {fileID: 9218443090513311310}
   m_Layer: 0
   m_Name: bossSpawnWin (1)
-  m_TagString: spawner
+  m_TagString: bossDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102439,7 +102439,7 @@ GameObject:
   - component: {fileID: 8791279735823172973}
   m_Layer: 0
   m_Name: bossSpawnWin
-  m_TagString: spawner
+  m_TagString: bossDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106053,7 +106053,7 @@ GameObject:
   - component: {fileID: 356791070076436668}
   m_Layer: 0
   m_Name: bossSpawnWin (2)
-  m_TagString: spawner
+  m_TagString: bossDrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

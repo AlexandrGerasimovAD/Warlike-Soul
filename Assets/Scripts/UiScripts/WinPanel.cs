@@ -16,6 +16,5 @@ public class WinPanel : MonoBehaviour
     public void ClosedWinPanel()
     {
         transform.GetChild(0).gameObject.SetActive(false);
-        GameObject.Find("AbsManager").GetComponent<RewardCountManager>()._coinCount = 0;
     }
 }

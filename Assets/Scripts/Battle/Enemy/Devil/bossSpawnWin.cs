@@ -37,10 +37,4 @@ public class bossSpawnWin : MonoBehaviour
             _item.transform.position = new Vector3(transform.position.x, transform.position.y + (float)1.5, transform.position.z);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

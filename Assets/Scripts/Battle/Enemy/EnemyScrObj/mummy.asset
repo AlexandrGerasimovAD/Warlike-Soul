@@ -18,5 +18,5 @@ MonoBehaviour:
   _deleyActivDomageObj: 0
   _deleyDeActivDomageObj: 0
   _domage: 200
-  _hp: 300
+  _hp: 500
   _deleyAtackForTrigerWalk: 0

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnterenceRoom: {fileID: 6796953169482281045, guid: b85f329c89e18d849a273cfe7a9eca78, type: 3}
   _generateRoom: 1
-  _maxCountRoom: 6
+  _maxCountRoom: 5
   _countRoom: 0
   _countEnemy: 7
   _minCountEnemy: 5

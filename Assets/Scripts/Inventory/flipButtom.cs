@@ -39,7 +39,10 @@ public class flipButtom : MonoBehaviour,IPointerUpHandler,IPointerDownHandler
             _slotParent._count = _item.item.countItem;
             _slotParent._full = false;
             _slotParent._itemIndex = _item.item.id;
+            _slotParent._rashodnik = _item.item._rashodnik;
+            _slotParent._gameItem = _item.item._gameItem;
             _slotParent._maxCount = _item.item.maxCount;
+            _slotParent._heel = _item.item._heel;
             _slotParent._typeWeapoon = _item.item._typeWeapoon;
             _slotParent._prefabForPlayer = _item.item.prefabforPlayer;
             _slotParent._prefabForLocation = _item.item.prefabforLocation;
